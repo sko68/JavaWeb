@@ -30,7 +30,7 @@
         <!-- -->
         <c:if test="${empty sessionScope.user.username}">
             <a href="pages/user/login.jsp">登录</a> |
-            <a href="pages/user/regist.jsp">注册</a> &nbsp;&nbsp;
+            <a href="pages/user/regist.jsp">注册</a>
             <a href="pages/cart/cart.jsp">购物车</a>
             <a href="pages/manager/manager.jsp">后台管理</a>
         </c:if>
@@ -38,7 +38,9 @@
         <c:if test="${not empty sessionScope.user.username}">
             <span>欢迎<span class="um_span">${sessionScope.user.username}</span>光临尚硅谷书城</span>
             <a href="pages/order/order.jsp">我的订单</a>
-            <a href="userServlet?action=logout">注销</a>&nbsp;&nbsp;
+            <a href="userServlet?action=logout">注销</a>
+            <a href="pages/cart/cart.jsp">购物车</a>
+            <a href="pages/manager/manager.jsp">后台管理</a>
         </c:if>
 
 
