@@ -1,5 +1,6 @@
 package com.sk.web;
 
+
 import com.sk.pojo.Cart;
 import com.sk.pojo.User;
 import com.sk.service.OrderService;
@@ -33,7 +34,6 @@ public class OrderServlet extends BaseServlet {
         Integer userId = loginUser.getId();
         //调用OrderService.createOrder(Cart , Userid),生成订单
         String orderId = orderService.createOrder(cart, userId);
-
         //req.setAttribute("orderId", orderId);
         //请求转发到/pages/cart/checkout.jsp
 //        req.getRequestDispatcher("/pages/cart/checkout.jsp").forward(req, resp);
